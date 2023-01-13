@@ -1,5 +1,6 @@
 import React, { RefObject } from 'react'
 import s from "../styles/About.module.css"
+import CV from "../assets/CV - Nicolas Veron.pdf"
 
 type AboutProps = {
    currRef: RefObject<HTMLDivElement>
@@ -23,7 +24,7 @@ const About = ({ currRef }: AboutProps) => {
                   saber como funcionan desde atras.
                </p>
                <div className={s.h2container}>
-                  <a href=""><h2>Descargar CV</h2></a>
+                  <a href={CV} download><h2>Descargar CV</h2></a>
                </div>
             </div>
          </div>
