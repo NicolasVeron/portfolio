@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Pokemon App",
+        "image": "test.gif",
+        "icon": "pokemon.ico",
+        "deploy": "https://creative-narwhal-e5947a.netlify.app/",
+        "repository": "https://github.com/NicolasVeron/PI-Pokemon"
+    },
+    {
+        "id": 2,
+        "name": "Fashion Clothing",
+        "image": "can.gif",
+        "icon": "FC.ico",
+        "deploy": "https://proyecto-final-ropa-moda.vercel.app/products",
+        "repository": "https://github.com/laura16ortega/Proyecto-Final-Ropa-Moda"
+    }
+]

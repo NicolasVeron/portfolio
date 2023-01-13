@@ -1,0 +1,194 @@
+.background {
+    padding-top: 2px;
+    background: conic-gradient(from 90deg at 4px 4px,
+            #F3D6FF 90deg, #0000 0) -20px -1.5px/55px 55px;
+    background-color: #D8BFE3;
+    height: calc(100% + 358px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    box-sizing: border-box;
+    margin-right: auto;
+    display: block;
+    padding-top: 40px;
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.content {
+    padding: 0 8em;
+}
+
+.infoContainer {
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+
+.info {
+    width: 60%;
+}
+
+.info h1 {
+    font-weight: bold;
+    font-size: 6.3vmin;
+}
+
+.info p {
+    padding: 1.5rem 4rem;
+    font-size: 3.1vmin;
+}
+
+.info div {
+    display: flex;
+}
+
+.info h2 {
+    background-color: #DC8BFE;
+    padding: 6px 38px;
+    font-weight: normal;
+    font-size: 3.2vmin;
+}
+
+.imageContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.3em
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.imageContainer h2 {
+    background-color: #DC8BFE;
+    padding: 6px 38px;
+    font-weight: normal;
+    font-size: 3.2vmin;
+    display: none;
+}
+
+.info a, .imageContainer a {
+    text-decoration: none;
+    color: black;
+    transition: .2s ease-in;
+}
+
+.info a:hover, .imageContainer a:hover {
+    transform: scale(1.1);
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 3.5em;
+}
+
+.projectIcon {
+    cursor: pointer;
+}
+
+.projectIcon img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    max-height: 200px;
+    transition: .3s ease-in-out;
+}
+
+.projectIcon h2 {
+    color: white;
+    background-color: black;
+    padding: .2rem 2rem;
+    margin-top: 2.5rem;
+    font-size: 3.2vmin;
+    font-family: "times_new_roman";
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.projectIcon:hover img {
+    transform: translateY(-25px);
+}
+
+.floor {
+    position: relative;
+    height: 30em;
+    width: 100%;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+.squares {
+    background: conic-gradient(from 90deg at 5px 5px, rgb(214, 167, 234) 90deg, rgb(220, 125, 233) 0) -38px -5px/170px 72px;
+    top: -18px;
+    bottom: 0;
+    height: 35em;
+    width: 9999px;
+    left: -24%;
+    transform: rotateX(55deg);
+    position: absolute;
+}
+
+.lines {
+    background: conic-gradient(from 90deg at 5px 5px, rgba(0,0,0,0) 90deg, #DC7DE9 0) -38px 0px/170px 72px;
+    position: absolute;
+    top: -0.7rem;
+    height: 5%;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .content {
+        padding: 0 2em;
+    }
+
+    .infoContainer {
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .info p {
+        padding: 1.5rem 1.5rem !important;
+    }
+
+    .info h2 {
+        display: none;
+    }
+
+    .imageContainer {
+        width: 100%;
+    }
+
+    .imageContainer h2 {
+        display: block;
+    }
+}
+
+@media (max-width: 800px) {
+    .content {
+        padding: 0 1em;
+    }
+}

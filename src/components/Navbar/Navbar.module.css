@@ -1,0 +1,135 @@
+.nav {
+    display: flex;
+    align-items: center;
+    background-color: #F3D6FF;
+    /*padding: 20px 80px;*/
+    position: relative;
+    z-index: 9999;
+}
+
+.nav a {
+    background-color: #F3D6FF;
+}
+
+.nav div:nth-child(2),
+.navbarLinks li:last-child p {
+    display: none;
+}
+
+.navbarLinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+}
+
+.navbarLinks li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    transition: 0.3 ease-in-out;
+}
+
+.navbarLinks li:last-child {
+    border-left: 2px solid black;
+    padding: 0 3rem;
+    cursor: pointer;
+}
+
+.navbarLinks li:last-child a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbarLinks li p,
+.navbarLinks li svg {
+    color: black;
+    cursor: pointer;
+
+    transition: .2s ease-in-out;
+    background-image: linear-gradient(to right,
+            #fff,
+            #fff 50%,
+            #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* hacer otro hover*/
+.navbarLinks li p:hover {
+    background-position: -200%;
+}
+
+.mobile {
+    display: none;
+    height: 100%;
+    background-color: #F3D6FF;
+}
+
+.mobile i {
+    color: black;
+}
+
+@media (max-width: 1000px) {
+    .nav {
+        justify-content: space-between;
+    }
+
+    .nav div:nth-child(2) {
+        display: block;
+        width: 100%;
+        height: 90px;
+        position: relative;
+        background-color: #F3D6FF;
+        z-index: 9999;
+    }
+
+    .navbarLinks {
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: -215px;
+        right: 0px;
+        width: 100vw;
+        background-color: #F3D6FF;
+        padding: 40px 0 0 10px;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbarLinks.active {
+        top: 90px;
+    }
+
+    .navbarLinks li {
+        margin-bottom: 25px;
+    }
+
+    .navbarLinks li:last-child {
+        border: none;
+    }
+
+    .navbarLinks li:last-child svg {
+        display: none;
+    }
+
+    .navbarLinks li:last-child p {
+        display: block;
+    }
+
+    .mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    .mobile i {
+        /*font-size: 24px;*/
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 20px;
+    }
+}
