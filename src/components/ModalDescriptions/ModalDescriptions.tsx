@@ -10,7 +10,7 @@ const ModalDescriptions = ({ id }: DescriptionsProps) => {
       case 1:
          return (
             <div>
-               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1673557982/PKMN_LP_ipip9t.png" />
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1673557982/PKMN_LP_ipip9t.png" loading='lazy'/>
                
                <h2>Descripción</h2>
                <p>Proyecto que toma a prueba todos los conocimientos obtenidos en el bootcamp de programacion Henry.</p>
@@ -33,7 +33,7 @@ const ModalDescriptions = ({ id }: DescriptionsProps) => {
       case 2:
          return (
             <div>
-               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1673559024/FCLogo1600_wv2qch.png" alt=""/>
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1673559024/FCLogo1600_wv2qch.png" loading='lazy'/>
                <h2>Descripción</h2>
                <p>🔹Este proyecto fue creado en Soy Henry's Bootcamp</p>
                <p>🔹LA idea fue desarrollar un SPA ( Single Page Application ) usando React para el frontend y Redux para manejar los estados.</p>
@@ -57,7 +57,9 @@ const ModalDescriptions = ({ id }: DescriptionsProps) => {
             </div>
          )
       default:
-         return null
+         return (
+            <div>loading</div>
+         )
    }
 }
 

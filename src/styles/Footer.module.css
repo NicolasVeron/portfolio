@@ -85,3 +85,14 @@
 .links ul li a:hover {
     background-position: -200%;
 }
+
+@media (max-width: 367px) {
+    .links ul {
+        justify-content: center;
+        gap: .5rem;
+    }
+    .links ul li {
+        border-left: 3px solid rgb(198, 86, 218);
+        border-right: 3px solid rgb(198, 86, 218);
+    }
+}

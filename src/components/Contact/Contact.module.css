@@ -130,6 +130,10 @@
     height: 26px;
 }
 
+.infoContainer {
+    width: 100% !important;
+}
+
 @media (max-width: 620px) {
     .container {
         margin: 0 1rem;

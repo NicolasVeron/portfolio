@@ -1,13 +1,14 @@
-import React, { RefObject, useState } from 'react'
+import React, { RefObject, useState, lazy, Suspense } from 'react'
 import myProjects from "../assets/projects.json"
-import type { ProjectTypes } from "../types"
 import s from "../styles/Projects.module.css"
-import Win95Modal from '../components/Win95Modal/Win95Modal'
+//import Win95Modal from '../components/Win95Modal/Win95Modal'
 
 type ProjectProps = {
    projectRef: RefObject<HTMLDivElement>
    contactRef: RefObject<HTMLDivElement>
 }
+
+const Win95Modal = lazy(() => import('../components/Win95Modal/Win95Modal'));
 
 const Projects = ({ projectRef, contactRef }: ProjectProps) => {
 
@@ -37,7 +38,7 @@ const Projects = ({ projectRef, contactRef }: ProjectProps) => {
                      </div>
                   </div>
                   <div className={s.imageContainer}>
-                     <img src="/images/placeholder.jpg" alt="placeholder" />
+                     <img src="/images/projects.jpg" alt="projects" />
                      <a target="_blank" href="https://github.com/NicolasVeron"><h2>GitHub</h2></a>
                   </div>
                </div>
@@ -48,7 +49,9 @@ const Projects = ({ projectRef, contactRef }: ProjectProps) => {
                         <h2>{p.name}</h2>
                      </div>
                   )}
-                  <Win95Modal isOpen={isOpen} closeModal={closeModal} infoID={modalID} />
+                  <Suspense fallback={<div>loading...</div>}>
+                     <Win95Modal isOpen={isOpen} closeModal={closeModal} infoID={modalID} />
+                  </Suspense>
                </div>
             </div>
             <div className={s.floor}>
