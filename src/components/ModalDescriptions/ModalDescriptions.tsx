@@ -25,9 +25,9 @@ const ModalDescriptions = ({ id }: DescriptionsProps) => {
                <p>Database: Postgres | Sequelize</p>
                <br />
                
-               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1672933852/PKMN_Home_prgz4u.png" />
-               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1673557990/PKMN_Details_hyi0rc.png" />
-               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1672933932/PKMN_Form_d40ufn.png" />
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1672933852/PKMN_Home_prgz4u.png" loading='lazy'/>
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1673557990/PKMN_Details_hyi0rc.png" loading='lazy'/>
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1672933932/PKMN_Form_d40ufn.png" loading='lazy'/>
             </div>
          )
       case 2:
@@ -47,13 +47,13 @@ const ModalDescriptions = ({ id }: DescriptionsProps) => {
                <p>🔹 Database: MongoDB | Mongoose</p>
                <br />
 
-               <img src="https://user-images.githubusercontent.com/86984789/210461878-bae35ca0-e423-4ba5-8b86-cc339ad80549.png" alt="" />
-               <img src="https://user-images.githubusercontent.com/86984789/210461959-5c9554fc-a9f8-466c-9cdd-1d180217b4d4.png" alt="" />
-               <img src="https://user-images.githubusercontent.com/86984789/210462100-96faa819-0430-481c-8ac5-a36ffaf4dd1f.png" alt="" />
-               <img src="https://user-images.githubusercontent.com/86984789/210462186-bfb916f6-3112-46fc-abcd-517310def658.png" alt="" />
-               <img src="https://user-images.githubusercontent.com/86984789/210463260-5d8b69dc-b277-4eb5-9cdc-b1d315111fda.png" alt="" />
-               <img src="https://user-images.githubusercontent.com/86984789/210463268-9ec639b4-2e05-4073-a2aa-7f6557260b46.png" alt="" />
-               <img src="https://user-images.githubusercontent.com/86984789/210463278-3b43aa21-7dee-4bc4-9e94-d427c575b553.png" alt="" />
+               <img src="https://user-images.githubusercontent.com/86984789/210461878-bae35ca0-e423-4ba5-8b86-cc339ad80549.png" alt="" loading='lazy'/>
+               <img src="https://user-images.githubusercontent.com/86984789/210461959-5c9554fc-a9f8-466c-9cdd-1d180217b4d4.png" alt="" loading='lazy'/>
+               <img src="https://user-images.githubusercontent.com/86984789/210462100-96faa819-0430-481c-8ac5-a36ffaf4dd1f.png" alt="" loading='lazy'/>
+               <img src="https://user-images.githubusercontent.com/86984789/210462186-bfb916f6-3112-46fc-abcd-517310def658.png" alt="" loading='lazy'/>
+               <img src="https://user-images.githubusercontent.com/86984789/210463260-5d8b69dc-b277-4eb5-9cdc-b1d315111fda.png" alt="" loading='lazy'/>
+               <img src="https://user-images.githubusercontent.com/86984789/210463268-9ec639b4-2e05-4073-a2aa-7f6557260b46.png" alt="" loading='lazy'/>
+               <img src="https://user-images.githubusercontent.com/86984789/210463278-3b43aa21-7dee-4bc4-9e94-d427c575b553.png" alt="" loading='lazy'/>
             </div>
          )
       default:

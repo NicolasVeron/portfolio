@@ -1,7 +1,6 @@
 import React, { RefObject, useState, lazy, Suspense } from 'react'
 import myProjects from "../assets/projects.json"
 import s from "../styles/Projects.module.css"
-//import Win95Modal from '../components/Win95Modal/Win95Modal'
 
 type ProjectProps = {
    projectRef: RefObject<HTMLDivElement>
@@ -20,7 +19,10 @@ const Projects = ({ projectRef, contactRef }: ProjectProps) => {
       setModalID(id)
    }
 
-   const closeModal = () => setIsOpen(false)
+   const closeModal = () => {
+      setIsOpen(false)
+      setModalID(9999)
+   }
 
    return (
       <div ref={projectRef} className={s.background}>
