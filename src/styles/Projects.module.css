@@ -96,34 +96,6 @@
     gap: 3.5em;
 }
 
-.projectIcon {
-    cursor: pointer;
-}
-
-.projectIcon img {
-    height: 100%;
-    width: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    max-height: 200px;
-    transition: .3s ease-in-out;
-}
-
-.projectIcon h2 {
-    color: white;
-    background-color: black;
-    padding: .2rem 2rem;
-    margin-top: 2.5rem;
-    font-size: 1.3rem;
-    font-family: "times_new_roman";
-    letter-spacing: 2px;
-    font-weight: normal;
-}
-
-.projectIcon:hover img {
-    transform: translateY(-25px);
-}
-
 .floor {
     position: relative;
     height: 30em;

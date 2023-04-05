@@ -1,5 +1,6 @@
 import React, { RefObject, useState, lazy, Suspense } from 'react'
 import myProjects from "../assets/projects.json"
+import ProjectIntro from '../components/ProjectIntro/ProjectIntro'
 import s from "../styles/Projects.module.css"
 
 type ProjectProps = {
@@ -13,11 +14,6 @@ const Projects = ({ projectRef, contactRef }: ProjectProps) => {
 
    const [modalID, setModalID] = useState<number | null>(null)
    const [isOpen, setIsOpen] = useState<boolean>(false)
-
-   const openModal = (id: number) => {
-      setIsOpen(true)
-      setModalID(id)
-   }
 
    const closeModal = () => {
       setIsOpen(false)
@@ -46,10 +42,7 @@ const Projects = ({ projectRef, contactRef }: ProjectProps) => {
                </div>
                <div className={s.projects}>
                   {myProjects.map((p, i) =>
-                     <div key={i} className={s.projectIcon} onClick={() => openModal(p.id)}>
-                        <img src={`/images/${p.image}`} alt={p.name} />
-                        <h2>{p.name}</h2>
-                     </div>
+                     <ProjectIntro project={p} setIsOpen={setIsOpen} setModalID={setModalID} key={i}/>
                   )}
                   <Suspense fallback={<div>loading...</div>}>
                      <Win95Modal isOpen={isOpen} closeModal={closeModal} infoID={modalID} />

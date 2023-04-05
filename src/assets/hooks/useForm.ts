@@ -20,13 +20,9 @@ const useForm = (InitialState: InitialState) => {
             name: ""
         }
 
-        const res = await fetch(`https://emailvalidation.abstractapi.com/v1/?api_key=c9ab08d7f7454894a79375736420bc4a&email=${input.email}`)
-        const data = await res.json()
-
         if (!input.name || !input.email || !input.message) errors.name = "Algun campo es requerido"
         else if (input.name.length > 100 || input.email.length > 100) errors.name = "Nombre o email contienen mas de 100 caracteres"
         else if (!input.email.match(emailregex)) errors.name = "Email invalido"
-        else if (data.deliverability !== "DELIVERABLE") errors.name = "Email n̷̨̛̹̯͎̺͍̠̦̺̲̼͍̹̭͉͒̓͒̈ǫ̷̩̳͎̠͈̰̘̟̦̯̮̜͒͆͌͗̆̓͆͝ͅ ̷̧̳̙̩̫̪̦̳̣̗͈̱͓̫͔̂́̃̅̑̄͋͘ḙ̴̢̝͇̬̠̙̠̳̞͕̅x̵̤̙̄̾̾i̷̖̱̺̪͓͉̠͕̰̳͗͑͜s̵͎̩͇̙̯̺̖͇̖̜̞̟̬͂͑͜͜t̸̩̹̰̼̹̏̐͜͜ẹ̷̡̡̘̠̟̅͝ͅņ̸̡̹͉̮͚̩͚̜̾̀̐͋̇̊͆̚͝ẗ̷̨̡̙̪͍̺̺̘̣̐́̈́͜ȇ̸̡̢̧̛̜̫̮̱̱͙̦̱͈̭̅͂͊̌̎̑̿̏͆͒̏̉̚ͅ"
 
         return errors
     }

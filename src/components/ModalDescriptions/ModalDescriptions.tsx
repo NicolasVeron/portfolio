@@ -56,6 +56,28 @@ const ModalDescriptions = ({ id }: DescriptionsProps) => {
                <img src="https://user-images.githubusercontent.com/86984789/210463278-3b43aa21-7dee-4bc4-9e94-d427c575b553.png" alt="" loading='lazy'/>
             </div>
          )
+      case 3:
+         return (
+            <div>
+               <h2>Descripción</h2>
+               <p>Proyecto de prueba con NextJS 13 y NestJS</p>
+               <p>Utilizando Firebase como storage de videos y Next-Auth como autenticación de usuario.</p>
+               <p>De momento Next 13 se encuentra en fase beta, por lo que puede contener bugs y sufrir cambios durante el tiempo.</p>
+               <br />
+
+               <p>En primera instancia se recomienda recargar luego de un periodo entre 30 a 60 segundos cuando haya iniciado la base de datos.</p>
+               <br />
+
+               <h2>Tecnologías</h2>
+               <p>🔹 FrontEnd: NextJS 13 | Next-Auth | TailwindCSS</p>
+               <p>🔹 BackEnd: NestJS</p>
+               <p>🔹 Database: MongoDB | Firebase</p>
+               <br />
+
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1680710105/YT-next_rpr7z6.png" alt="" loading='lazy'/>
+               <img src="https://res.cloudinary.com/dayt0wtlk/image/upload/v1680718392/YT-next_2_irp06q.png" alt="" loading='lazy'/>
+            </div>
+         )
       default:
          return (
             <div>loading</div>

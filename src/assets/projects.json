@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Pokemon App",
-        "image": "test.gif",
+        "image": "test.webm",
         "icon": "pokemon.ico",
         "deploy": "https://creative-narwhal-e5947a.netlify.app/",
         "repository": "https://github.com/NicolasVeron/PI-Pokemon"
@@ -10,9 +10,17 @@
     {
         "id": 2,
         "name": "Fashion Clothing",
-        "image": "can.gif",
+        "image": "can.webm",
         "icon": "FC.ico",
         "deploy": "https://proyecto-final-ropa-moda.vercel.app/products",
         "repository": "https://github.com/laura16ortega/Proyecto-Final-Ropa-Moda"
+    },
+    {
+        "id": 3,
+        "name": "YT-Next",
+        "image": "video.webm",
+        "icon": "youtube.ico",
+        "deploy": "https://yt-next-gray.vercel.app",
+        "repository": "https://github.com/NicolasVeron/yt-next"
     }
 ]

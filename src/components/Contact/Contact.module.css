@@ -61,6 +61,7 @@
     border-color: hsl(0, 0%, 60%) hsl(0, 0%, 98%) hsl(0, 0%, 98%) hsl(0, 0%, 60%);
     font-size: 1rem;
     resize: none;
+    font-family: "W95FA";
 }
 
 .buttonContainer {

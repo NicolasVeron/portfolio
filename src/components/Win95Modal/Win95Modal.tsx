@@ -4,12 +4,9 @@ import myProjects from "../../assets/projects.json"
 import ModalDescriptions from '../ModalDescriptions/ModalDescriptions'
 
 type ModalProps = {
-   //children: React.ReactNode
    isOpen: any
    closeModal: any
    infoID: number | null
-   // title
-   // type
 }
 
 const Win95Modal = ({ isOpen, closeModal, infoID }: ModalProps) => {
