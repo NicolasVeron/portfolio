@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid white;
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: .5rem;
+}
+
+.taskbarButton,
+.timer {
+    font-size: 1.2rem;
+    gap: .3rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.timer {
+    cursor: default
+}

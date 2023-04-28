@@ -1,25 +1,28 @@
 [
     {
-        "id": 1,
         "name": "Pokemon App",
-        "image": "test.webm",
+        "image": "https://res.cloudinary.com/dayt0wtlk/image/upload/v1672933852/PKMN_Home_prgz4u.png",
         "icon": "pokemon.ico",
+        "description": "Proyecto Individual en el bootcamp de programacion Henry. Desde el backend se realizan peticiones a una <a href='https://pokeapi.co/' target='blank'>api extensa de Pokemon</a>, realizando busquedas individuales o enteras. Desde el front se toma foco principal en el manejo del estado con los filtros y ordenamientos usando React y Redux. Cuenta tambien con un formulario para crear tu propio pokemon validado con Javascript.",
+        "skills": "ReactJS, Redux, CSS, JavaScript, ExpressJS, Postgres, Sequelize",
         "deploy": "https://creative-narwhal-e5947a.netlify.app/",
         "repository": "https://github.com/NicolasVeron/PI-Pokemon"
     },
     {
-        "id": 2,
         "name": "Fashion Clothing",
-        "image": "can.webm",
+        "image": "https://user-images.githubusercontent.com/86984789/210462100-96faa819-0430-481c-8ac5-a36ffaf4dd1f.png",
         "icon": "FC.ico",
+        "description": "Este proyecto fue creado en Soy Henry's Bootcamp. Trabajo en equipo desarrollando un E-Commerce de ropa con pasarela de pago, panel de administracion, reviews, comentarios, inicio de sesion con Google y persistencia del navegador",
+        "skills": "ReactJS, Redux, Material UI, TypeScript, ExpressJS, MongoDB, Mongoose",
         "deploy": "https://proyecto-final-ropa-moda.vercel.app/products",
         "repository": "https://github.com/laura16ortega/Proyecto-Final-Ropa-Moda"
     },
     {
-        "id": 3,
         "name": "YT-Next",
-        "image": "video.webm",
+        "image": "https://res.cloudinary.com/dayt0wtlk/image/upload/v1680710105/YT-next_rpr7z6.png",
         "icon": "youtube.ico",
+        "description": "Proyecto de prueba con NextJS 13 y NestJS. Utilizando Firebase como storage de videos y Next-Auth como autenticación de usuario. De momento Next 13 se encuentra en fase beta, por lo que puede contener bugs y sufrir cambios durante el tiempo.",
+        "skills": "NextJS 13, Next-Auth, TailwindCSS, TypeScript, NestJS, MongoDB, Firebase",
         "deploy": "https://yt-next-gray.vercel.app",
         "repository": "https://github.com/NicolasVeron/yt-next"
     }

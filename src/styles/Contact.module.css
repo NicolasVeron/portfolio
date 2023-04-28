@@ -1,0 +1,20 @@
+.background {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/images/greenhills.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}

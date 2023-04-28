@@ -1,55 +1,55 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { WindowHeader } from '..'
+import { icons } from '../../assets/constants'
 import s from "./Win95Modal.module.css"
-import myProjects from "../../assets/projects.json"
-import ModalDescriptions from '../ModalDescriptions/ModalDescriptions'
+import "../../App.css"
 
 type ModalProps = {
-   isOpen: any
-   closeModal: any
-   infoID: number | null
+   setOpen: (b: boolean) => void
 }
 
-const Win95Modal = ({ isOpen, closeModal, infoID }: ModalProps) => {
-   const content = useRef<null | HTMLElement>(null)
+const Win95Modal = ({ setOpen }: ModalProps) => {
+   const { VITE_RESUME_URL } = import.meta.env
+   let reactPortal = document.getElementById("react-portal")
+
+   if (!reactPortal) {
+      const newDiv = document.createElement('div')
+      reactPortal = document.body.appendChild(newDiv)
+      reactPortal.id = "react-portal"
+   }
 
    const handlePropagation = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       e.stopPropagation()
    }
 
-   const project = myProjects.find(p => p.id === infoID)
-
-   useEffect(() => {
-      if (content.current !== null) {
-         content.current.scroll(0, 0)
-      }
-   }, [isOpen])
-
    return (
-      <div className={`${s.modal} ${isOpen && s.active}`} onClick={closeModal}>
-         <div className={s.container} onClick={(e) => handlePropagation(e)}>
-            <div>
-               <div className={s.topModal}>
-                  <div>
-                     <i><img src={`/icons/${project?.icon}`} alt={project?.icon}/></i>
-                     <h5>{project?.name}</h5>
+      <>
+         {ReactDOM.createPortal(
+            <div className={s.modalBackground} onClick={() => setOpen(false)}>
+               <div className={`${s.container} w95-layout`} onClick={(e) => handlePropagation(e)}>
+                  <WindowHeader
+                     icon={icons.briefcase}
+                     title="Resume"
+                     cross
+                     crossAction={() => setOpen(false)}
+                  />
+                  <nav className={s.links}>
+                     <p><a href="/CV - Nicolas Veron.pdf" download>Descarga</a></p>
+                     <p><a href="/CV - Nicolas Veron.pdf" target="_blank">Nueva pestaña</a></p>
+                  </nav>
+                  <div className={s.bottomModal}>
+                     <div>
+                        <section className={`${s.modalContent} w95-under`}>
+                           <iframe src={VITE_RESUME_URL} allow="autoplay" />
+                        </section>
+                     </div>
                   </div>
-                  <button onClick={closeModal}>x</button>
                </div>
-               <div className={s.links}>
-                  <p><a href={project?.deploy} target="_blank">Deploy</a></p>
-                  <p><a href={project?.repository} target="_blank">Repositorio</a></p>
-               </div>
-               <div className={s.bottomModal}>
-                  <h3/>
-                  <div>
-                     <section ref={content} className={s.modalContent}>
-                        <ModalDescriptions id={project?.id}/>
-                     </section>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+            </div>,
+            reactPortal
+         )}
+      </>
    )
 }
 

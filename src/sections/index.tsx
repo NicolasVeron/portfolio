@@ -1,11 +1,9 @@
-import About from "./About"
-import Footer from "./Footer"
+import Contact from "./Contact"
 import Introduction from "./Introduction"
 import Projects from "./Projects"
 
 export {
-    About,
-    Footer,
+    Contact,
     Introduction,
     Projects,
 }

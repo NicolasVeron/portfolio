@@ -1,64 +1,30 @@
-import React, { RefObject, useState, lazy, Suspense } from 'react'
+import { RefObject } from 'react'
+import { ProjectCard } from '../components'
 import myProjects from "../assets/projects.json"
-import ProjectIntro from '../components/ProjectIntro/ProjectIntro'
 import s from "../styles/Projects.module.css"
+import "../App.css"
 
 type ProjectProps = {
-   projectRef: RefObject<HTMLDivElement>
-   contactRef: RefObject<HTMLDivElement>
+   projectRef: RefObject<HTMLElement>
 }
 
-const Win95Modal = lazy(() => import('../components/Win95Modal/Win95Modal'));
-
-const Projects = ({ projectRef, contactRef }: ProjectProps) => {
-
-   const [modalID, setModalID] = useState<number | null>(null)
-   const [isOpen, setIsOpen] = useState<boolean>(false)
-
-   const closeModal = () => {
-      setIsOpen(false)
-      setModalID(9999)
-   }
+const Projects = ({ projectRef }: ProjectProps) => {
 
    return (
-      <div ref={projectRef} className={s.background}>
+      <section ref={projectRef} className={s.background}>
          <div className={s.container}>
             <div className={s.content}>
-               <div className={s.infoContainer}>
-                  <div className={s.info}>
-                     <h1>Proyectos</h1>
-                     <p>
-                        En esta sección muestro algunos de los proyectos que he realizado con los conocimientos
-                        adquiridos. Actualmente sigo realizando más proyectos para apliar mi aprendizaje.
-                     </p>
-                     <div>
-                        <a target="_blank" href="https://github.com/NicolasVeron"><h2>GitHub</h2></a>
-                     </div>
-                  </div>
-                  <div className={s.imageContainer}>
-                     <img src="/images/projects.jpg" alt="projects" />
-                     <a target="_blank" href="https://github.com/NicolasVeron"><h2>GitHub</h2></a>
-                  </div>
-               </div>
+               <header className={s.infoContainer}>
+                  <h1 className='w95-button'>Proyectos</h1>
+               </header>
                <div className={s.projects}>
                   {myProjects.map((p, i) =>
-                     <ProjectIntro project={p} setIsOpen={setIsOpen} setModalID={setModalID} key={i}/>
+                     <ProjectCard project={p} key={i} />
                   )}
-                  <Suspense fallback={<div>loading...</div>}>
-                     <Win95Modal isOpen={isOpen} closeModal={closeModal} infoID={modalID} />
-                  </Suspense>
-               </div>
-            </div>
-            <div className={s.floor}>
-               <div ref={contactRef} className={s.squares}>
-                  <div className={s.lines}>
-                     <div>
-                     </div>
-                  </div>
                </div>
             </div>
          </div>
-      </div>
+      </section>
    )
 }
 

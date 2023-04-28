@@ -1,0 +1,42 @@
+.commandTool {
+    background-color: black;
+    color: white;
+    margin: 3px;
+    padding: 2px;
+    text-align: left;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
+.commandTool p:nth-child(3) {
+    padding-top: .7rem
+}
+
+.commandTool p:nth-child(4),
+.commandTool p:nth-child(n+7) 
+{
+    padding: .7rem 0;
+}
+
+.commandTool a {
+    cursor: pointer;
+    color: #77a5ff;
+}
+
+.commandTool a:hover {
+    color: #77a5ff;
+    text-decoration: underline;
+} 
+
+.prompt::after {
+    content: "_";
+    padding-left: 1px;
+    animation: blink .9s step-start infinite;
+    opacity: 90%;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

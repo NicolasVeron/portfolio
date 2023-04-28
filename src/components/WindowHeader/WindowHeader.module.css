@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    background-color: #00a;
+    justify-content: space-between;
+    color: white;
+    margin: 2px;
+    padding: 2px 6px;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.header img {
+    height: 32px;
+    width: auto;
+}
+
+.header h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.header button {
+    margin-top: 5px;
+    height: 22px;
+    width: 22px;
+    border: 2px solid;
+    border-color: hsl(0, 0%, 98%) hsl(0, 0%, 26%) hsl(0, 0%, 26%) hsl(0, 0%, 98%);
+    background: silver;
+    color: black;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.header button:active {
+    border: 2px inset #fff;
+    background: silver;
+    box-shadow: -1px -1px #000;
+}

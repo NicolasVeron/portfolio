@@ -1,0 +1,85 @@
+.cardContainer {
+   width: 100%;
+   overflow: hidden;
+}
+
+.content {
+   margin: 0 .7rem;
+   padding: .7rem 0;
+   border-bottom: 2px solid rgb(138, 138, 138);
+}
+
+.projectWrapper {
+   display: flex;
+   gap: 1rem;
+}
+
+.imageContainer {
+   flex: 1;
+   overflow: hidden;
+}
+
+.imageContainer img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   aspect-ratio: 1 / 1;
+   padding: 0;
+}
+
+.info {
+   flex: 3.5;
+   text-align: start;
+   padding: .3rem 0;
+}
+
+.info h3 {
+   margin: 1rem 0;
+   font-size: 1.8rem;
+}
+
+.info a {
+   color: #2d49eb !important;
+}
+
+.info a:hover {
+   text-decoration: underline;
+}
+
+.info p:nth-child(3) {
+   margin: 1rem 0;
+}
+
+.links {
+   display: flex;
+   justify-content: flex-end;
+   gap: .7rem;
+   margin: .7rem;
+   padding-top: .7rem;
+   margin-top: 0;
+   border-top: 2px solid hsl(0, 0%, 98%);
+}
+
+.links a {
+   font-size: 1.2rem;
+}
+
+.links a::first-letter {
+   text-decoration: underline;
+}
+
+@media (max-width: 678px) {
+   .projectWrapper {
+      flex-direction: column;
+      gap: 0;
+   }
+
+   .imageContainer,
+   .info {
+      width: 100%;
+   }
+
+   .imageContainer img {
+      aspect-ratio: 16 / 9;
+   }
+}

@@ -1,24 +1,26 @@
-import React, { RefObject } from 'react'
+import { RefObject } from 'react'
+import { CommandInfo, WindowHeader } from '../components'
+import { icons } from '../assets/constants'
 import s from "../styles/Introduction.module.css"
+import "../App.css"
 
 type IntroProps = {
-   currRef: RefObject<HTMLDivElement>
+   currRef: RefObject<HTMLElement>
 }
 
-const Introduction = ({currRef}: IntroProps) => {
+const Introduction = ({ currRef }: IntroProps) => {
    return (
-      <div ref={currRef} className={s.background}>
+      <section ref={currRef} className={s.background}>
          <div className={s.container}>
-            <div className={s.content}>
-               <h1 className={s.title}>Verón Nicolas</h1>
-               <div className={s.subcontent}>
-                  <p>
-                     Full-Stack Web Developer.
-                  </p>
-               </div>
+            <div className="w95-layout">
+               <WindowHeader 
+               icon={icons.cmd}
+               title='Command prompt'
+               />
+               <CommandInfo/>
             </div>
          </div>
-      </div>
+      </section>
    )
 }
 

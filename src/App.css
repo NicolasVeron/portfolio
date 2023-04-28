@@ -1,4 +1,46 @@
 .App {
-  text-align: center;
+   text-align: center;
 }
 
+.w95-button {
+   cursor: pointer;
+   background: silver;
+   padding: 4px;
+   border: 2px solid;
+   border-color: hsl(0, 0%, 98%) hsl(0, 0%, 26%) hsl(0, 0%, 26%) hsl(0, 0%, 98%);
+}
+
+.w95-button:focus {
+   border-color:
+      hsl(0, 0%, 0%) hsl(0, 0%, 98%) hsl(0, 0%, 98%) hsl(0, 0%, 0%);
+}
+
+.w95-button:focus span,
+.w95-button:focus div {
+   border: 1px dotted black;
+}
+
+.w95-button span,
+.w95-button div {
+   border: 1px dotted transparent;
+   padding: 0.1rem 1.1rem;
+}
+
+.w95-under {
+   border: 2px solid;
+   border-color: hsl(0, 0%, 60%) hsl(0, 0%, 98%) hsl(0, 0%, 98%) hsl(0, 0%, 60%);
+   padding: .3rem;
+}
+
+.w95-layout {
+   background-color: rgb(199, 199, 199);
+   box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px #C2C6CA, inset -1px -1px #85898d, inset 2px 2px white;
+   padding: 3px;
+}
+
+.w95-nav {
+   background-color: silver;
+   padding: 3px 6px;
+   min-height: 40px;
+   border: 1px outset #fff;
+}

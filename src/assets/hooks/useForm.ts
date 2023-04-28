@@ -5,6 +5,7 @@ type InitialState = {
     name: string
     email: string
     message: string
+    [index: string]: string
 }
 
 const useForm = (InitialState: InitialState) => {
@@ -39,14 +40,13 @@ const useForm = (InitialState: InitialState) => {
         const validated = await validation(input)
         if (validated.name.length > 0) setErrors(validated)
         else {
-            //await emailjs.sendForm(
-            //    import.meta.env.VITE_SERVICE_ID, 
-            //    import.meta.env.VITE_TEMPLATE_ID, 
-            //    e.target, 
-            //    import.meta.env.VITE_PUBLIC_KEY
-            //)
             setErrors({name: ""})
-            await emailjs.send("service_5tiq3vl","template_0pmzxvh", input, "vnap6grHJcb-IalvP");
+            await emailjs.send(
+                import.meta.env.VITE_SERVICE_ID, 
+                import.meta.env.VITE_TEMPLATE_ID, 
+                input, 
+                import.meta.env.VITE_PUBLIC_KEY
+            )
             setInput(InitialState)
             setSuccess("Mensaje enviado con exito")
             setTimeout(() => {

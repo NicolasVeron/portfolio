@@ -1,0 +1,90 @@
+.container {
+   width: 600px;
+}
+
+.formContainer {
+   padding: 1.7rem 2.3rem;
+   padding-bottom: .5rem;
+}
+
+.labelInput {
+   display: flex;
+   justify-content: space-between;
+   margin: .6rem 0;
+}
+
+.labelInput label {
+   font-size: 1.2rem;
+   max-width: 30%;
+   overflow-wrap: break-word;
+}
+
+.labelInput input,
+.labelInput textarea {
+   width: 70%;
+   padding: 4px 3px;
+   font-size: 1rem;
+   resize: none;
+   letter-spacing: 1px;
+   font-family: "W95FA";
+}
+
+.buttonContainer {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.buttonContainer button {
+   margin-bottom: 1rem;
+}
+
+.buttonContainer button::first-letter {
+   text-decoration: underline;
+}
+
+.footerContainer {
+   display: flex;
+   justify-content: space-between;
+}
+
+.footerLeft,
+.footerRight {
+   text-align: start;
+   min-height: 32px;
+}
+
+.footerLeft {
+   width: 65%;
+}
+
+.footerRight {
+   width: 34.5%;
+}
+
+.footerLeft div {
+   display: flex;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   gap: .4rem;
+}
+
+.footerLeft div img {
+   height: 26px;
+}
+
+.infoContainer {
+   width: 100% !important;
+}
+
+@media (max-width: 620px) {
+   .container {
+      margin: 0 .7rem;
+      width: auto;
+   }
+}
+
+@media (max-width: 500px) {
+   .formContainer {
+      padding: 1.3rem 1rem;
+   }
+}

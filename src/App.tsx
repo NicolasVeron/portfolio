@@ -1,13 +1,12 @@
 import { useEffect, useRef } from 'react'
+import { Navbar, Footer } from './components'
+import { Contact, Introduction, Projects } from './sections'
 import './App.css'
-import { About, Footer, Introduction, Projects } from './sections'
-import Navbar from './components/Navbar/Navbar'
 
 function App() {
-   const introRef = useRef<HTMLDivElement>(null)
-   const aboutRef = useRef<HTMLDivElement>(null)
-   const projectRef = useRef<HTMLDivElement>(null)
-   const contactRef = useRef<HTMLDivElement>(null)
+   const introRef = useRef<HTMLElement>(null)
+   const projectRef = useRef<HTMLElement>(null)
+   const contactRef = useRef<HTMLElement>(null)
 
    useEffect(() => {
       window.scroll({ top: 0, behavior: 'smooth' })
@@ -15,10 +14,10 @@ function App() {
 
    return (
       <div className="App">
-         <Navbar introRef={introRef} aboutRef={aboutRef} projectRef={projectRef} contactRef={contactRef}/> {/* @_@ */}
+         <Navbar introRef={introRef} projectRef={projectRef} contactRef={contactRef}/>
          <Introduction currRef={introRef} />
-         <About currRef={aboutRef} />
-         <Projects projectRef={projectRef} contactRef={contactRef}/>
+         <Projects projectRef={projectRef}/>
+         <Contact currRef={contactRef}/>
          <Footer/>
       </div>
    )
